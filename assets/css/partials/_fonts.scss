@@ -1,0 +1,52 @@
+// ----------------------------------------------------------------------
+	// Font Families
+// ----------------------------------------------------------------------
+
+//Georgrotesque
+
+@include fontface('Geogrotesque-SemiBold', 'assets/fonts/dale-fonts', '2705D8_9_0');
+
+//Bario
+
+@font-face { 
+    font-family: 'bariolbold';  
+    src: url('assets/fonts/Bariol/Bariol_Bold.otf'); 
+ }
+
+@font-face { 
+    font-family: 'bariolregular';  
+    src: url('assets/fonts/Bariol/Bariol_Regular.otf'); 
+}
+
+@font-face { 
+    font-family: 'bariol-light';  
+    src: url('assets/fonts/Bariol/Bariol_Light.otf'); 
+}
+
+@font-face { 
+    font-family: 'bariolregular-italic';  
+    src: url('assets/fonts/Bariol/Bariol_Regular_Italic.otf'); 
+}
+
+@font-face { 
+    font-family: 'bariollight-italic';  
+    src: url('assets/fonts/Bariol/Bariol_Light_Italic.otf'); 
+}
+
+@font-face { 
+    font-family: 'avenir';  
+    src: url('assets/fonts/Avenir/Avenir-Medium.ttf'); 
+}
+@font-face { 
+    font-family: 'avenir-black';  
+    src: url('assets/fonts/Avenir/Avenir-Black.ttf'); 
+}
+@font-face { 
+    font-family: 'avenir-heavy';  
+    src: url('assets/fonts/Avenir/Avenir-Heavy.ttf'); 
+}
+@font-face { 
+    font-family: 'avenir-light';  
+    src: url('assets/fonts/Avenir/Avenir-Light.ttf'); 
+}
+

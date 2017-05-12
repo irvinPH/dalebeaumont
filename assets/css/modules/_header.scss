@@ -1,0 +1,298 @@
+/*  =================
+   Navigation
+================== */
+#top-header {
+	.site-header {
+		padding: 10px 0;
+		box-shadow: none;
+		background-color: #fff;
+		z-index: 5;
+		.site-logo {
+			padding: 0.56em 0;
+		}
+		.menu-icon{
+			display: inline-block;
+    		margin: 20px 0;
+    		float: right;
+    		cursor: pointer;			    
+
+    		.title {
+		    	font-size: 1.2em;
+		    	font-family: $font--bariolregular;
+		    	color: $primary;
+		    	text-transform: uppercase;
+    			line-height: 0;
+			 }
+			.burger-menu {
+			    display: block;
+			    margin: 4px 0 0 10px;
+			    text-align: right;
+			    float: right;
+			   
+
+				span {
+					display: block;
+					margin-bottom: 4px;
+					width: 18px;
+					height: 3px;
+				    background: $lighter-blue;
+				    text-align: right; 
+				    transition: all 0.5s linear;
+
+				}
+			}
+			.rotate {
+				    margin-top: 11px;
+
+				    span {
+				    	margin-bottom: -3px;
+				    	&:nth-child(1) {
+				    		transform: rotate(-45deg);
+				    	}
+				    	&:nth-child(2) {
+				    		display: none;
+				    	}
+				    	&:nth-child(3) {
+				    		transform: rotate(45deg);
+
+				    	}
+				    }
+			}
+		}
+
+		.navbar {
+			margin-bottom: 0;
+			text-align: right;
+			background-color: transparent !important;
+			box-shadow: none;
+			float: left;
+    		width: calc(100% - 50px);
+			ul {
+				margin-bottom: 0;
+			    list-style: none;
+
+			    li {
+			    	display: inline-block;
+			    	position: relative;
+			    	margin: 1.5em 0 0.95em 1em;
+			    	a {
+			    		
+			    		font-size: 1em;
+			    		display: inline-block;
+			    		padding: 0;
+			    		color: $primary;
+			    		font-family: $font--bariolregular;
+			    		-webkit-transition: color 0.3s ease;
+						transition: color 0.3s ease;
+
+			    		&:hover {
+			    			color: $secondary;
+			    			text-decoration: none;
+			    		}
+			    	}
+					.fa {
+			    		float: right;
+			    		color: $primary;
+			    		font-size: 0.5em;
+			    		margin-left: 5px;
+			    		margin-top: 2px;
+			    		&:hover {
+			    			color: $secondary;
+			    			cursor: pointer;
+			    		}
+			    	}
+			    	.navbar__search {
+    						.fa {
+    							font-size: 1em;
+    							color: $gray;
+    						}
+    				}
+			    	.sub-menu {
+			    		display: none;
+			    		position: absolute;
+			    		z-index: 9999;
+    					margin: -0.2em 0 0 -0.3em;
+    					padding-top: 1.4em;
+    					box-shadow: none;
+    					min-width: 12em;
+    					background: transparent;
+    					clip: auto;
+    					
+    					-webkit-transition: display 0.5s ease;
+    					transition: display 0.5s ease;
+
+    					li {
+    						display: block;
+    						margin: 0;
+
+    						a {
+									display: block;
+								    padding: 0.8em 1em 0.8em 1.3em;
+								    border-top: none;
+								    border-bottom: 1px solid #f4f4f5;
+								    background-color: #f8f8f9;
+								    color: #00274d;
+								    font-size: 0.95em;
+								    text-align: left;
+								    font-weight: normal;
+    							
+
+    							&:hover {
+    								background-color: #f3f3f3;
+    							}
+    						}
+    					}
+
+			    	}
+					&:hover {
+						a, .fa {
+							color: $orange;
+						}
+						.sub-menu {
+							display: block;
+
+
+							&:before {
+								content: '';
+								display: block;
+								position: absolute;
+								height: 12px;
+								width: 12px;
+								background: #f8f8f9;
+								top: 19px;
+								left: 20px;
+								transform: rotate(45deg);
+							}
+						}
+						
+					}
+					&:last-child {
+						 a {
+							border-bottom-left-radius: 5px;
+							border-bottom-right-radius: 5px;
+						}
+					}
+
+			    }
+			    .active {
+			    	a, .fa {
+			    		color: $secondary;
+			    	}
+
+			    }
+			}
+		}
+		/* Sliding Search Box */
+		.sb-search {
+			position: absolute;
+    		right: 0;
+			margin-top: 15px;
+			width: 0%;
+			min-width: 60px;
+			height: 60px;
+			float: right;
+			overflow: hidden;
+
+			-webkit-transition: width 0.3s;
+			-moz-transition: width 0.3s;
+			transition: width 0.3s;
+
+			-webkit-backface-visibility: hidden;
+
+			.sb-search-input {
+				position: absolute;
+				top: 0;
+				right: 0;
+				border: none;
+				outline: none;
+				background: #fff;
+				width: 100%;
+				height: 50px;
+				margin: 0;
+				z-index: 10;
+				padding: 20px 65px 20px 20px;
+				font-family: $font--bariolregular;
+				font-size: 20px;
+				color: #2c3e50;
+				border-radius: 50px;
+
+				&:-webkit-input-placeholder {
+					color: #efb480;
+				}
+				&:-moz-placeholder {
+					color: #efb480;
+				}
+				&::-moz-placeholder {
+					color: #efb480;
+				}
+				&:-ms-input-placeholder {
+					color: #efb480;
+				}
+			}
+			input[type="search"].sb-search-input {
+				-webkit-appearance: none;
+				-webkit-border-radius: 0px;
+			}
+			.sb-icon-search,
+			.sb-search-submit  {
+				width: 50px;
+				height: 50px;
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 0;
+				margin: 0;
+				line-height: 50px;
+				text-align: center;
+				cursor: pointer;
+			}
+			.sb-search-submit {
+				background: #fff; /* IE needs this */
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+			    filter: alpha(opacity=0); /* IE 5-7 */
+			    opacity: 0;
+				color: transparent;
+				border: none;
+				outline: none;
+				z-index: -1;
+			}
+			.sb-icon-search {
+				color: #bebfbf;
+				z-index: 90;
+				font-size: 22px;
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				-webkit-font-smoothing: antialiased;
+			}
+
+		}
+		.sb-search-open,
+		.no-js .sb-search {
+				width: 100%;
+
+				.sb-icon-search {
+				    background: #ffffff;
+				    color: #f15d22;
+				    z-index: 11;
+				    border: 1px solid #efeeee;
+				    border-bottom-right-radius: 50px;
+				    border-top-right-radius: 50px;
+				    border-left: none;
+
+				}
+				.sb-search-submit {
+					z-index: 90;
+				}
+				.sb-search-input {
+				    border: 1px solid #efeeee;
+				}
+		}
+
+	}
+}
+
+

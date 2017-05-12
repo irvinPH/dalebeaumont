@@ -1,0 +1,62 @@
+.signup-form--horizontal  {
+	.moonray-form {
+		background: #021537;
+		border-radius: 5px;
+		padding: 5px;
+
+        .moonray-form-clearfix {
+
+
+				.moonray-form-element-wrapper {
+					padding: 5px;
+				    float: left;
+					width: 50%;
+
+				    .moonray-form-label {
+				    	display: none;
+				    }
+				    .moonray-form-input {
+						border-radius: 6px;
+						height: 52px;
+						width: 100%;
+					    height: 46px;
+					    margin: 0;
+					    padding: 0 10px;
+					    font: 16px;
+				    }
+				    .signup-form input, 
+				    .signup-form select {
+						border: 1px solid #CCC;
+				    }
+					
+				}
+				.moonray-form-input-type-hidden {
+					padding: 0;
+				}
+				.moonray-form-input-type-submit {
+					 input[type='submit'] {
+						background-color: $orange;
+						color: #fff;
+						text-transform: uppercase;
+					}
+				}
+				&:after {
+			    	clear: both;
+			    	content: '';
+			    	display: block;
+				}
+		}			
+	}
+}
+
+@media (min-width: 960px) {
+	.signup-form--horizontal  {
+		.moonray-form {
+			.moonray-form-clearfix {
+				.moonray-form-element-wrapper {
+			    	width: 20%;
+				}
+			}
+		}
+	}
+}
