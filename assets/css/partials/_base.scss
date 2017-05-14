@@ -55,3 +55,82 @@ p {
 .show {
 	display: block;
 }
+
+.slick-arrow {
+    width: 2em;
+    height: 2em;
+}
+.slick-arrow {
+    position: absolute;
+    z-index: 99;
+    top: 40%;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-width: 4px 4px 0 0;
+    border-style: solid;
+    border-color: #dbdbdf;
+    background: transparent;
+    outline: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: transparent;
+
+
+    &:hover {
+    	border-color: $orange;
+    }
+}
+
+#testimonials .slick-prev {
+    left: -4.5em;
+	transform: rotateZ(-135deg);
+}
+#testimonials .slick-next {
+	transform: rotateZ(45deg);
+	right: -4.5em;
+
+}
+.slick-dots button {
+    display: block;
+    width: 16px;
+    height: 16px !important;
+    min-height: 16px;
+    margin: 2px;
+    padding: 0;
+    border: 1px solid #f15d22;
+    border-radius: 50%;
+    background: #FFF;
+    -webkit-transition: all 150ms ease-out;
+    transition: all 150ms ease-out;
+    text-indent: -9999px;
+    outline: none;
+}
+#testimonials .slick-dots {
+    position: static;
+    display: block;
+    -ms-transform: none;
+    transform: none;
+    text-align: center;
+    margin-top: 20px;
+}
+.slick-dots {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+#testimonials .slick-dots li {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+}
+.slick-dots .slick-active button {
+    background: #f15d22;
+}

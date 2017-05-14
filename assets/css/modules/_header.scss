@@ -129,16 +129,21 @@
 									display: block;
 								    padding: 0.8em 1em 0.8em 1.3em;
 								    border-top: none;
-								    border-bottom: 1px solid #f4f4f5;
-								    background-color: #f8f8f9;
-								    color: #00274d;
+								    background-color: $orange;
+								    color: #fff;
 								    font-size: 0.95em;
 								    text-align: left;
 								    font-weight: normal;
     							
 
     							&:hover {
-    								background-color: #f3f3f3;
+    								background-color: $navy;
+    							}
+    						}
+
+    						&:last-child  {
+    							a {
+    							   border-bottom: none;
     							}
     						}
     					}
@@ -158,8 +163,8 @@
 								position: absolute;
 								height: 12px;
 								width: 12px;
-								background: #f8f8f9;
-								top: 19px;
+								background: $orange;
+								top: 21px;
 								left: 20px;
 								transform: rotate(45deg);
 							}
@@ -267,6 +272,7 @@
 				font-variant: normal;
 				text-transform: none;
 				-webkit-font-smoothing: antialiased;
+				color: $orange;
 			}
 
 		}
@@ -276,7 +282,7 @@
 
 				.sb-icon-search {
 				    background: #ffffff;
-				    color: #f15d22;
+				    color: $orange;
 				    z-index: 11;
 				    border: 1px solid #efeeee;
 				    border-bottom-right-radius: 50px;
