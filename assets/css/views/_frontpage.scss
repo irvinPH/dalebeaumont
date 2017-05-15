@@ -88,7 +88,7 @@
      .project {
 
                display: block;
-               padding: 15px 0;
+               padding: 0 0 30px 0;
      }
 }
 #featured {
@@ -115,7 +115,7 @@
           &__subheading {
                text-align: center;
                font-size: 1.4em;
-               margin: 0 0 40px 0;
+               margin: 0 0 30px 0;
           } 
           &__player {
                overflow: hidden;
@@ -149,7 +149,8 @@
                     padding: 0.8em 1.2em;
                     font-family: $font--bariolregular;
                     background: $orange;
-                    border-radius: 10px;
+                    border-radius: 50px;
+                    font-size: 1.2em;
                     overflow: hidden;
                     color: #fff;
                     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.4);
@@ -187,7 +188,7 @@
      }
      .blog {
           display: block;
-          margin: 0.8em 0;
+          margin: 0 0 1.6em 0;
           &__panel {
                border: 1px solid #efecec;
                background: #fff;
@@ -251,10 +252,12 @@
 }
 #other-projects {
      padding: $mtb-pad;
+     border-bottom: 1px solid #f1f0f0;
      background: #faf9f8;
+
      .module {
           &__heading {
-               margin: 0 0 40px 0;
+               margin: 0 0 30px 0;
                text-align: center;
                text-transform: capitalize;
                font-family: $font--bariolbold;
@@ -265,9 +268,10 @@
 }
 #next-step {
      padding: $mtb-pad;
+     border-bottom: 1px solid #efeeee;
      .module {
           &__heading {
-               margin: 0 0 40px 0;
+               margin: 0 0 30px 0;
                text-align: center;
                text-transform: capitalize;
                font-family: $font--bariolbold;

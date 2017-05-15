@@ -1,7 +1,11 @@
 /**
  * Base SCSS
  */
+html, body {
+    font-family: $font--bariolregular;
+    font-size: 18px;
 
+}
 .wrap{
 	display: table;
 	width: 100%;
@@ -55,7 +59,10 @@ p {
 .show {
 	display: block;
 }
-
+a { 
+   -webkit-transition: all 0.5s ease;
+   transition: all 0.5s ease;
+}
 .slick-arrow {
     width: 2em;
     height: 2em;

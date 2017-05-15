@@ -4,5 +4,68 @@
    background: $navy;
 	   .signup-form {
    }
+   .fat-footer {
+
+	margin-top: 50px;
+      .pad-right {
+      	padding-right: 50px;
+      }
+	  .footer-logo {
+	  	 margin-bottom: 1.5em;
+
+	  	 img {
+	  	 	max-width: 300px;
+	  	 }
+	  }	
+      .description {
+		    color: #fff;
+		    font-size: 1em;
+	   }
+	   .menu {
+		   &--footer {
+
+		   	    li {
+
+		   	    	a {
+		   	    		    font-size: 1.1em;
+						    padding: 1px 5px;
+						    display: inline-block;
+						    background: $orange;
+						    color: #fff;
+						    margin-bottom: 5px;
+
+						    &:hover {
+						    	background-color: #00bce4;
+						    	text-decoration: none;
+						    }
+		   	    	}
+		   	    }
+		    }
+		    &--social {
+
+		   	    li {
+		   	    	display: inline-block;	
+		   	    	a {
+						    font-size: 0.9em;
+						    text-align: center;
+						    padding: 2px;
+						    display: inline-block;
+						    background: #fff;
+						    color: #00274d;
+						    margin-bottom: 5px;
+						    height: 24px;
+						    width: 24px;
+						    border-radius: 50%;
+
+						    &:hover {
+						    	background-color: $orange;
+						    	text-decoration: none;
+						    }
+		   	    	}
+		   	    }
+		    }
+			 
+      	}
+  	}
 
 }
