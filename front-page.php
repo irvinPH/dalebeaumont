@@ -1,6 +1,6 @@
 <?php
 /**
- * Index File
+ * Front Page
  */
 
 get_header();
@@ -11,7 +11,7 @@ get_header();
 		<div class="row">
 			  <div class="col-md-offset-6 col-md-6">
 			  	  <h1><span class="top animated fadeInUp">The Official Website of</span> <span class="caps animated fadeInUp">Dale Beaumont</span></h1>
-			  	  <h2 class="animated fadeInUp">Award Winning Entrepreneur, <span>International Business Expert &</span> 16 Times Best-Selling Author</h2>
+			  	  <h2 class="animated fadeInUp">Award Winning Entrepreneur, <span>International Speaker &</span> 16 Times Best-Selling Author</h2>
 			  </div>
 		</div>
 	</div>
@@ -54,7 +54,7 @@ get_header();
 		 <h2 class="module__heading animated">Current Projects</h2>
 
 		 <div class="row">
-		 	 <div class="col-md-6">
+		 	 <div class="col-custom col-md-6 col-sm-6 col-xs-6">
 		 	 	 <a href="#" class='project'>
 		 	 	 	 <div class='project__panel project-1 animated'>
 		 	 	 	 	  <div class="project__panel--image">
@@ -63,7 +63,7 @@ get_header();
 		 	 	 	 </div>
 		 	 	 </a>
 		 	 </div>
-		 	 <div class="col-md-6">
+		 	 <div class="col-custom col-md-6 col-sm-6 col-xs-6">
 		 	 	<a href="#" class='project'>
 		 	 	 	 <div class='project__panel project-2 animated'>
 		 	 	 	 	  <div class="project__panel--image">
@@ -72,7 +72,7 @@ get_header();
 		 	 	 	 </div>
 		 	 	</a>
 		 	 </div>
-		 	 <div class="col-md-6">
+		 	 <div class="col-custom col-md-6 col-sm-6 col-xs-6">
 		 	 	<a href="#" class='project animated'>
 		 	 	 	 <div class='project__panel project-3 animated'>
 		 	 	 	 	  <div class="project__panel--image">
@@ -82,7 +82,7 @@ get_header();
 		 	 	</a>
 
 		 	 </div>
-		 	 <div class="col-md-6">
+		 	 <div class="col-custom col-md-6 col-sm-6 col-xs-6">
 		 	 	<a href="#" class='project animated'>
 		 	 	 	 <div class='project__panel project-4 animated'>
 		 	 	 	 	  <div class="project__panel--image">
@@ -117,7 +117,7 @@ get_header();
 		 <h2 class="module__heading animated">Featured Blog Posts</h2>
 
 		 <div class="row">
-		 	 <div class="col-md-6">
+		 	 <div class="col-custom col-md-6 col-sm-6 col-xs-6">
 		 	 	 <a href="#" class='blog'>
 		 	 	 	 <div class='blog__panel blog-1 animated'>
 		 	 	 	 	  <div class="blog__image">
@@ -127,7 +127,7 @@ get_header();
 		 	 	 	 </div>
 		 	 	 </a>
 		 	 </div>
-		 	 <div class="col-md-6">
+		 	 <div class="col-custom col-md-6 col-sm-6 col-xs-6">
 		 	 	<a href="#" class='blog'>
 		 	 	 	 <div class='blog__panel blog-2 animated'>
 		 	 	 	 	  <div class="blog__image">
@@ -137,7 +137,7 @@ get_header();
 		 	 	 	 </div>
 		 	 	</a>
 		 	 </div>
-		 	 <div class="col-md-6">
+		 	 <div class="col-custom col-md-6 col-sm-6 col-xs-6">
 		 	 	<a href="#" class='blog'>
 		 	 	 	 <div class='blog__panel blog-3 animated'>
 		 	 	 	 	  <div class="blog__image">
@@ -148,7 +148,7 @@ get_header();
 		 	 	</a>
 
 		 	 </div>
-		 	 <div class="col-md-6">
+		 	 <div class="col-custom col-md-6 col-sm-6 col-xs-6">
 		 	 	<a href="#" class='blog'>
 		 	 	 	 <div class='blog__panel blog-4 animated'>
 		 	 	 	 	  <div class="blog__image">
@@ -211,14 +211,14 @@ get_header();
 	<div class="container">
 		 <h2 class="module__heading">Other Projects</h2>
 		 <div class="row">
-		 	  <div class="col-md-6">
+		 	  <div class="col-md-6 col-sm-6 col-xs-6">
 			 	  	<a href="#">
 			 	  	  <div class="module__image other-project1 animated">
 			 	  	  	  <img src="<?php echo bloginfo('template_url') ?>/assets/img/Books.png" />
 			 	  	  </div>
 			 	  	</a>  
 		 	  </div>
-		 	  <div class="col-md-6">
+		 	  <div class="col-md-6 col-sm-6 col-xs-6">
 		 	  	  <a href="#">
 			 	  	  <div class="module__image other-project2 animated">
 			 	  	  	  <img src="<?php echo bloginfo('template_url') ?>/assets/img/Charity.png" />
@@ -228,26 +228,4 @@ get_header();
 		 </div>
 	</div>
 </section>
-<section id="next-step" class="top-footer module">
-	<div class="container">
-		 <h2 class="module__heading">Next Steps</h2>
-		 <div class="row">
-		 	  <div class="col-md-6">
-		 	      <a href="#">
-			 	  	  <div class="module__image animated step-1">
-			 	  	  	  <img src="<?php echo bloginfo('template_url') ?>/assets/img/52WAYS.png" />
-			 	  	  </div>
-		 	  	  </a>
-		 	  </div>
-		 	  <div class="col-md-6">
-		 	 	   <a href="#">
-			 	  	  <div class="module__image animated step-2">
-			 	  	  	  <img src="<?php echo bloginfo('template_url') ?>/assets/img/BRiN.png" />
-			 	  	  </div>
-			 	   </a>  
-		 	  </div>
-		 </div>
-	</div>
-</section>
-
 <?php get_footer(); ?>

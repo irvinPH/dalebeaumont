@@ -233,8 +233,8 @@ nav ul {
 // style select like a standard input
 
 select {
-	-moz-appearance: none;    // Firefox 36+
-	-webkit-appearance: none; // Chrome 41+
+/*	-moz-appearance: none;    // Firefox 36+
+	-webkit-appearance: none; // Chrome 41+*/
 
 	&::-ms-expand {
 		display: none;        // Internet Explorer 11+

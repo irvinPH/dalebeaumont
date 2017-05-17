@@ -51,7 +51,7 @@ input, textarea, select {
     border-color: #EEE;
     background: #FFF;
     font-family: 'bariolregular', sans-serif;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 p {
 	font-family: $font--bariolregular;
@@ -84,7 +84,12 @@ a {
     transition: all 0.5s ease;
     color: transparent;
 
-
+        @include maxv(768)  {
+            top: 10%;
+            width: 30px;
+            height: 30px;
+                
+        }
     &:hover {
     	border-color: $orange;
     }
@@ -140,4 +145,8 @@ a {
 }
 .slick-dots .slick-active button {
     background: #f15d22;
+}
+
+.col-custom {
+    width: 100%;
 }

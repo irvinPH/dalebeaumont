@@ -10,12 +10,46 @@
 		.site-logo {
 			padding: 0.56em 0;
 		}
+		@include maxv(768)  {
+			.mobile-icons {
+				margin-bottom: 0;
+			    text-align: right;
+			    list-style: none;
+ 				
+			    li {
+			    	display: inline-block;
+			    	margin-left: 15px;
+			    	a {
+			    		display: block;
+			    		height: 50px;
+    					line-height: 50px;
+
+    					.fa-search {
+    						color: $orange;
+    					}
+    					&:hover {
+    						text-decoration: none;
+    					}
+			    	}
+			    	.menu-icon {
+			    		margin: 0;
+
+			    		.burger-menu {
+			    			margin: 0;
+			    		}
+			    	}
+			    }
+			}
+		}
 		.menu-icon{
 			display: inline-block;
     		margin: 20px 0;
     		float: right;
-    		cursor: pointer;			    
+    		cursor: pointer;	
 
+		   	@include maxv(768)  { 
+		   		float: none;
+		   	}
     		.title {
 		    	font-size: 1.2em;
 		    	font-family: $font--bariolregular;
@@ -28,14 +62,17 @@
 			    margin: 4px 0 0 10px;
 			    text-align: right;
 			    float: right;
-			   
+
+			   	@include maxv(768)  { 
+			   		float: none;
+			   	}
 
 				span {
 					display: block;
 					margin-bottom: 4px;
 					width: 18px;
 					height: 3px;
-				    background: $lighter-blue;
+				    background: $orange;
 				    text-align: right; 
 				    transition: all 0.5s linear;
 
@@ -67,9 +104,19 @@
 			box-shadow: none;
 			float: left;
     		width: calc(100% - 50px);
+
+			@include maxv(768)  { 
+			    position: relative;
+			    float: none;
+        		width: 100%;
+        		min-height: auto;
+			}
 			ul {
 				margin-bottom: 0;
 			    list-style: none;
+    			@include maxv(768)  { 
+					display: none;
+				}
 
 			    li {
 			    	display: inline-block;
@@ -108,6 +155,7 @@
     						}
     				}
 			    	.sub-menu {
+			    		opacity: 0;
 			    		display: none;
 			    		position: absolute;
 			    		z-index: 9999;
@@ -118,8 +166,9 @@
     					background: transparent;
     					clip: auto;
     					
-    					-webkit-transition: display 0.5s ease;
-    					transition: display 0.5s ease;
+    					-webkit-transition: opacity 0.3s ease;
+    					transition: opacity 0.3s ease;
+
 
     					li {
     						display: block;
@@ -129,15 +178,17 @@
 									display: block;
 								    padding: 0.8em 1em 0.8em 1.3em;
 								    border-top: none;
-								    background-color: $orange;
-								    color: #fff;
+								    background-color: #f1f1f1;
+								    color: $navy;
 								    font-size: 0.95em;
 								    text-align: left;
 								    font-weight: normal;
+								    -webkit-transition: background-color 0.3s ease;
+									transition: background-color 0.3s ease;
     							
 
     							&:hover {
-    								background-color: $navy;
+    								background-color: #f1f1f1;
     							}
     						}
 
@@ -154,6 +205,7 @@
 							color: $orange;
 						}
 						.sub-menu {
+							opacity: 1; 
 							display: block;
 
 
@@ -163,7 +215,7 @@
 								position: absolute;
 								height: 12px;
 								width: 12px;
-								background: $orange;
+								background: #f1f1f1;
 								top: 21px;
 								left: 20px;
 								transform: rotate(45deg);

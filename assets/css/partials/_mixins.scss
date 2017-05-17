@@ -101,3 +101,48 @@
    }
  }
 
+/* ----------------------------------------------------------------------------
+ * Responsive
+ * Usage
+
+    @include maxv(240)  { }
+    @include maxv(320)  { }
+    @include maxv(480)  { }
+    @include maxv(768)  { }
+    @include maxv(1024) { }
+    @include maxv(1280) { }
+
+ * ------------------------------------------------------------------------- */
+
+@mixin maxv($point) {
+    @if $point == 240 {
+      @media (max-width: 240px) { @content; }
+    }
+   @if $point == 320 {
+     @media (max-width: 320px) { @content; }
+   }
+   @if $point == 480 {
+     @media (max-width: 480px) { @content; }
+   }
+   @if $point == 600 {
+     @media (max-width: 600px) { @content; }
+   }
+   @if $point == 768 {
+     @media (max-width: 768px) { @content; }
+   }
+   @if $point == 992 {
+     @media (max-width: 992px) { @content; }
+   }
+   @if $point == 1024 {
+     @media (max-width: 1024px) { @content; }
+   }
+   @if $point == 1140 {
+     @media (max-width: 1140px) { @content; }
+   }
+   @if $point == 1280 {
+     @media (max-width: 1280px) { @content; }
+   }
+   @if $point == 1500 {
+     @media (max-width: 1500px) { @content; }
+   }
+ }

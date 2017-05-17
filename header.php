@@ -20,21 +20,21 @@
 		<div class="site-header" itemscope itemprop="http://schema.org/WPHeader">
 			 <div class="container">
 			 	  <div class="row">
-			 	  	  <div class="col-custom col-xs-6 col-sm-4 col-md-3">
+			 	  	  <div class="col-xs-8 col-sm-4 col-md-3">
 			 	  	    <div class="site-logo">
 			 	  	  		<a href=""><img src="<?php bloginfo('template_url') ?>/assets/img/logo.svg" alt="Logo" class="site-logo" /></a>
 			 	  	  	</div>
 			 	  	  </div>
-			 	  	  <div class="col-custom visible-xs visible-sm col-xs-6 col-sm-8">
-			 	  	  	<div class="menu-icon">
-			 	  	  	    <span class="title">Menu </span>
-				 	  	  	<div class="burger-menu">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-							
-						</div>	
+			 	  	  <div class="visible-xs visible-sm col-xs-4 col-sm-8">
+                                <ul class="mobile-icons">
+                                	<li>
+                                		<a href="" class="menu-icon fa fa-bars fa-lg">
+										</a>
+                                	</li>
+                                	<li>
+                                		<a href=""><span class="fa fa-search fa-lg"></span></a> 
+                                	</li>
+                                </ul>	
 			 	  	  </div>
 			 	  	  <div class="col-xs-12 col-sm-12 col-md-9">
 			 	  	  		<nav class="navbar" itemscope itemprop="http://schema.org/SiteNavigationElement">
@@ -79,7 +79,7 @@
 					 	  	  	 	<li><a href="">Contact</a></li>
 					 	  	  	 </ul>
 			 	  	  	 	</nav>
-			 	  	  	 	<div id="sb-search" class="sb-search">
+			 	  	  	 	<div id="sb-search" class="sb-search hidden-xs hidden-sm">
 								<form>
 									<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
 									<input class="sb-search-submit" type="submit" value="">

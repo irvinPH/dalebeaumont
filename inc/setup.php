@@ -100,3 +100,25 @@ function dale_beaumont_enqueue_comments_reply() {
         wp_enqueue_script( 'comment-reply' );
     }
 }
+
+
+function dale_beaumont_body_classes( $classes ) {
+    if( ! is_front_page() ) {
+        $classes[] = 'not-home';
+    }
+
+    if( is_singular() ) {
+        $classes[] = 'singular';
+    }
+
+    if( is_page_template('full-width-module-page.php') ) {
+        $classes[] = 'module-page';
+    }
+
+    if( is_archive() || is_search() || is_home() ) {
+        $classes[] = 'list-view';
+    }
+
+    return $classes;
+}
+add_filter('body_class', 'dale_beaumont_body_classes');

@@ -1,3 +1,66 @@
+.signup-form {
+         .heading, 
+         .subheading {
+               color: #fff;
+               text-align: center;
+          }
+          .heading {
+               margin: 0;
+               text-transform: capitalize;
+               font-family: $font--bariolbold;
+               font-size: 2.3em;
+
+          }
+         .subheading {
+               font-size: 1.42em;
+               font-family: $font--bariol-light;
+          }
+     
+}
+
+/* SIGN UP FORM */
+
+.signup-form {
+   .module {
+   	     h2, 
+         .subheading {
+               color: #fff;
+               text-align: center;
+          }
+          .heading {
+               margin: 0;
+               text-transform: capitalize;
+               font-family: $font--bariolbold;
+               font-size: 2.3em;
+				@include maxv(768)  {
+					font-size: 2em;
+				}
+
+          }
+         .subheading {
+               font-size: 1.42em;
+               font-family: $font--bariol-light;
+               @include maxv(768)  {
+               	   font-size: 1em;
+               }
+          }
+           &__heading {
+               margin: 0;
+               text-transform: capitalize;
+               font-family: $font--bariolbold;
+
+               &--caps {
+		               @include maxv(768)  {
+		               	    color: $orange;
+                			text-transform: uppercase;
+	                    	font-size: 1em;
+	                  }
+          		}
+           }
+
+   }
+}
+
 .signup-form--horizontal  {
 	.moonray-form {
 		background: #021537;
@@ -11,7 +74,10 @@
 					padding: 5px;
 				    float: left;
 					width: 50%;
-
+						@include maxv(768)  {
+						    float: none;
+						    width: 100%;
+						}
 				    .moonray-form-label {
 				    	display: none;
 				    }
@@ -36,7 +102,9 @@
 				.moonray-form-input-type-submit {
 					 input[type='submit'] {
 						background-color: $orange;
+						font-family: $font--bariolbold;
 						color: #fff;
+
 						text-transform: uppercase;
 					}
 				}

@@ -15,19 +15,17 @@ var controller3 = new ScrollMagic.Controller();
 var controller4 = new ScrollMagic.Controller();
 
 // build scenes
-new ScrollMagic.Scene({triggerElement: "#test", duration: 600, triggerHook: 1,})
-	.setClassToggle("#test", "fadeIn") // add class toggle
-	.addTo(controller);
 
-new ScrollMagic.Scene({triggerElement: "#hero", duration: '100%', triggerHook: 0.2})
+
+new ScrollMagic.Scene({triggerElement: "#hero", duration: '100%', triggerHook: 0.8})
 	.setClassToggle(".top", 'show') // add class toggle
 	.addTo(controller2);
 
-new ScrollMagic.Scene({triggerElement: "#hero", duration: '100%', triggerHook: 0.2})
+new ScrollMagic.Scene({triggerElement: "#hero", duration: '100%', triggerHook: 0.8})
 	.setClassToggle("#hero .caps", 'show') // add class toggle
 	.addTo(controller3);
 
-new ScrollMagic.Scene({triggerElement: "#hero", duration: '100%', triggerHook: 0.2})
+new ScrollMagic.Scene({triggerElement: "#hero", duration: '100%', triggerHook: 0.8})
 	.setClassToggle("#hero h2", 'show') // add class toggle
 	.addTo(controller3);	
 
@@ -115,5 +113,15 @@ new ScrollMagic.Scene({triggerElement: ".step-2", duration: '100%', reverse: fal
         slidesToShow: 1,
         slidesToScroll: 1
       });
+      $(".not-home .slick-this").slick({
+        dots: false,
+        speed: 1000,
+        autoplay: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+      
 
 });		

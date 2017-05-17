@@ -17,7 +17,9 @@ Text Domain: wpgulp-theme
  * ------------------------------------------------------------------------- */
 
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../node_modules/font-awesome/scss/font-awesome";
 @import "vendors/slick";
+@import "vendors/animate";
 /* ----------------------------------------------------------------------------
  * Mixins & Variables
  * ------------------------------------------------------------------------- */
@@ -46,11 +48,10 @@ Text Domain: wpgulp-theme
 @import "modules/form";
 @import "modules/header";
 @import "modules/footer";
-
+@import "views/subpages";
 @import "views/frontpage";
 
-@import "../../node_modules/font-awesome/scss/font-awesome";
-@import "vendors/animate";
+
 
 
 

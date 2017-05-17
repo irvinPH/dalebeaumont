@@ -87,26 +87,3 @@ select{
 h1, h2, h3, h4, h5, h6 {
     font-family: $font--bariolregular;
 }
-.signup-form {
-         .heading, 
-         .subheading {
-               color: #fff;
-               text-align: center;
-          }
-          .heading {
-               margin: 0;
-               text-transform: capitalize;
-               font-family: $font--bariolregular;
-               font-size: 2.3em;
-
-               .caps {
-                    color: $orange;
-                    text-transform: uppercase;
-               }
-          }
-         .subheading {
-               font-size: 1.42em;
-               font-family: $font--bariol-light;
-          }
-     
-}

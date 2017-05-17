@@ -6,9 +6,17 @@
    }
    .fat-footer {
 
-	margin-top: 50px;
+		margin-top: 50px;
+		@include maxv(768)  {
+			margin-top: 30px;
+		    border-top: 1px solid #084469;
+		    padding-top: 30px;
+		}
       .pad-right {
       	padding-right: 50px;
+      		@include maxv(768)  {
+      			padding-right: 0;
+			}
       }
 	  .footer-logo {
 	  	 margin-bottom: 1.5em;
@@ -23,9 +31,13 @@
 	   }
 	   .menu {
 		   &--footer {
-
+	   	    	@include maxv(768)  { 
+	   	    		margin: 30px 0;
+	   	    	}
 		   	    li {
-
+		   	    	@include maxv(768)  { 
+		   	    		display: inline-block;
+		   	    	}
 		   	    	a {
 		   	    		    font-size: 1.1em;
 						    padding: 1px 5px;
@@ -45,6 +57,7 @@
 
 		   	    li {
 		   	    	display: inline-block;	
+
 		   	    	a {
 						    font-size: 0.9em;
 						    text-align: center;
@@ -66,6 +79,19 @@
 		    }
 			 
       	}
+      	.facebook-feed {
+      		.feed-header {
+      			color: #fff;
+      		}
+      		#cff .cff-item {
+			    padding: 10px 0 15px 0;
+			}
+
+      	}
+      	.copyright, .tagline {
+	  		color: #fff;
+	  	}
   	}
 
 }
+

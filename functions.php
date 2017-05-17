@@ -21,7 +21,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 1000; /* pixels */
 }
 // Include Folders
-include( DB_THEME_DIR . '/inc/init.php' );
+include( DB_THEME_DIR . '/inc/setup.php' );
 include( DB_THEME_DIR . '/inc/widgets.php' );
 include( DB_THEME_DIR . '/inc/customizer.php' );
 
