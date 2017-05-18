@@ -122,3 +122,81 @@ function dale_beaumont_body_classes( $classes ) {
     return $classes;
 }
 add_filter('body_class', 'dale_beaumont_body_classes');
+
+/**
+ * Extend the default WordPress post classes.
+ *
+ * Adds post classes to denote:
+ * 1. Any entry.
+ * 2. A clearfix.
+ *
+ * @since Dale Beaumont 1.0
+ *
+ * @param array $classes A list of existing post class values.
+ * @return array The filtered post class list.
+ */
+function dale_post_classes( $classes ) {
+    $classes[] = 'entry';
+    $classes[] = 'clearfix';
+
+    return $classes;
+}
+add_filter('post_class', 'dale_post_classes');
+
+
+
+function dale_comment_count( $count ) {
+    if ( ! is_admin() ) {
+        global $id;
+        $comments = get_comments( 'status=approve&post_id=' . $id );
+        $comments_by_type = separate_comments( $comments );
+
+        return count( $comments_by_type['comment'] );
+    } else {
+        return $count;
+    }
+}
+add_filter('get_comments_number', 'dale_comment_count', 0);
+
+
+
+function dale_excerpt_more( $more ) {
+    if ( is_front_page() ) {
+        return '';
+    }
+
+    return '… <a href="' . get_permalink() . '" class="entry__read-more">[Read More…]</a>';
+}
+add_filter('excerpt_more', 'dale_excerpt_more', 999);
+
+
+function dale_excerpt_length( $length ) {
+    if ( is_front_page() ) {
+        return 25;
+    }
+
+    return $length;
+}
+add_filter( 'excerpt_length', 'dale_excerpt_length', 999 );
+
+function dale_testimonial_size( $sizes ) {
+    return array( '284', '284' );
+}
+add_filter( 'magicdust_testimonials_thumbnail_size', 'dale_testimonial_size', 99 );
+
+
+/**
+ * Adjust Testimonial Slideshow Settings
+ *
+ * @param array $options Flexslider options as array.
+ * @return array Filtered flexslider options.
+ * @since  1.0
+ */
+function cascade_testimonial_slideshow_options( $options ) {
+    $options['smoothHeight'] = false;
+    $options['controlNav'] = true;
+    $options['slideshow'] = false;
+
+    return $options;
+}
+add_filter( 'magicdust_testimonials_flexslider_options', 'cascade_testimonial_slideshow_options', 99 );

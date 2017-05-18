@@ -30,7 +30,7 @@
 // START Editing Project Variables.
 // Project related.
 var project                 = 'WPGulpTheme'; // Project Name.
-var projectURL              = 'https://localhost/db-old/'; // Project URL. Could be something like localhost:8888.
+var projectURL              = 'http://localhost/db-old/'; // Project URL. Could be something like localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Translation related.

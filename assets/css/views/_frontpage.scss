@@ -85,6 +85,7 @@
                text-transform: capitalize;
                font-family: $font--bariolbold;
                font-size: 2.3em;
+               line-height: 1;
 
                   @include maxv(768)  {
                     font-size: 2em;
@@ -95,6 +96,7 @@
                }
           }
           &__subheading {
+               margin: 0 0 10px 0;
                font-size: 1.42em;
                font-family: $font--bariol-light;
                   @include maxv(768)  {
@@ -106,10 +108,10 @@
 }
 
 #projects {
-     padding: $mtb-pad;
+     padding: $stb-pad;
      .module {
           &__heading {
-               margin: 0 0 30px 0;
+               margin: 0 0 25px 0;
                text-align: center;
                text-transform: capitalize;
                font-family: $font--bariolbold;
@@ -133,11 +135,12 @@
                text-align: center;
                font-family: $font--bariolbold;
                font-size: 2em;
+               margin: 0 0 25px 0;
           }
      }
 }
 #video {
-     padding: 3em 0 0 0; 
+     padding: 2em 0 0 0; 
      .module {
 
           &__heading {
@@ -149,7 +152,8 @@
           &__subheading {
                text-align: center;
                font-size: 1.4em;
-               margin: 0 0 30px 0;
+               margin: 0 0 25px 0;
+               color: $navy;
           } 
           &__player {
                overflow: hidden;
@@ -161,12 +165,12 @@
      }
 }
 #featured-blogs {
-     padding: 3em 0 3em 0;
+     padding: 2em 0 2em 0;
      background: #faf9f8;
      .module {
 
           &__heading {
-               margin: 0 0 30px 0;
+               margin: 0 0 25px 0;
                text-align: center;
                text-transform: capitalize;
                font-family: $font--bariolbold;
@@ -276,12 +280,17 @@
                }
           }
           &__quote {
-               font-size: 1.7em;
-               line-height: 1.3;
-                   @include maxv(768)  {
-                      font-size: 1.3em;
-                      
-                   }
+                p {
+                      font-family: $font--bariolregular;
+                      font-size: 1.5em;
+                      line-height: 1.3;
+                      color: $navy;
+                      margin: 0 0 0.8em 0;
+                      @include maxv(768)  {
+                          font-size: 1.3em;
+                          
+                       }
+                }
           }
 
           &__name {
@@ -324,13 +333,13 @@
       }
 }
 #other-projects {
-     padding: $mtb-pad;
+     padding: $stb-pad;
      border-bottom: 1px solid #f1f0f0;
      background: #faf9f8;
 
      .module {
           &__heading {
-               margin: 0 0 30px 0;
+               margin: 0 0 25px 0;
                text-align: center;
                text-transform: capitalize;
                font-family: $font--bariolbold;
@@ -340,11 +349,11 @@
      }
 }
 #next-step {
-     padding: $mtb-pad;
+     padding: $stb-pad;
      border-bottom: 1px solid #efeeee;
      .module {
           &__heading {
-               margin: 0 0 30px 0;
+               margin: 0 0 25px 0;
                text-align: center;
                text-transform: capitalize;
                font-family: $font--bariolbold;

@@ -16,6 +16,9 @@ $g  		: #35ad68;
 $y			: #FFFDD2;
 
 $navy       : #00264c;
+$blue 		: #2287c8;
+$lightblue  : #0077c0;
+
 /* ----------------------------------------------------------------------------
  * Primary Color Variants
  * ------------------------------------------------------------------------- */
@@ -54,7 +57,7 @@ $font--GeorgeSemiBold: 'Geogrotesque-SemiBold', sans-serif;
 $font-GeorgeMedium: 'Geogrotesque-Medium', sans-serif;
 $font-GeorgeLight: 'Geogrotesque-Light', sans-serif;
 
-$font-pt: 'PT Sans', sans-serif;
+$font-pt: 'pt-sans', sans-serif;
 
 
 // ----------------------------------------------------------------------
@@ -67,7 +70,6 @@ $grid-columns: 12;
   // Primary Color Variants
 // ----------------------------------------------------------------------
 $primary: #00274d;
-$blue: #00274d;
 $secondary: #00bce4;
 $white: #fff;
 $medium-blue: #0077c0;
@@ -78,6 +80,8 @@ $light-gray: #f6f6f7;
 
 $navy: #00274d;
 $gray: #bebfbf;
+
+$bg-gray: #faf9f8;
 
 
 // ----------------------------------------------------------------------
@@ -104,7 +108,7 @@ $gray: #bebfbf;
   // Paddings
 // ----------------------------------------------------------------------
 $xtb-pad: 1.2em 0;
-$stb-pad: 2em 0;
+$stb-pad: 2.3em 0;
 $mtb-pad: 3em 0;
 $ltb-pad: 5em 0;
 

@@ -66,7 +66,7 @@
 	<footer class="site-footer">
 				<div class="container module">
 					<div class="footer  clearfix" itemscope itemprop="http://schema.org/WPFooter">
-						<?php get_template_part( 'template-parts/fat-footer' ); ?>
+						<?php get_template_part( 'partials/fat-footer' ); ?>
 					</div>
 				</div>
 			<?php wp_footer(); ?>

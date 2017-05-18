@@ -8,7 +8,7 @@
  */
 ?>
 
-<aside class="container  fat-footer" role="complementary">
+<aside class="fat-footer" role="complementary">
 	<div class="row">
 		<div class="col-md-6">
 		    <div class="pad-right">

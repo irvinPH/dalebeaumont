@@ -11,8 +11,8 @@
 	<?php endwhile; ?>
 
 	<div class="container  content-sidebar">
-		<div class="grid">
-			<div class="grid__column  grid__column--l-8  grid__column--content">
+		<div class="row">
+			<div class="col-md-8 content">
 				<div id="content" class="content" role="main" itemscope itemprop="mainContentOfPage">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'partials/content', 'page' ); ?>
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 
-			<div class="grid__column  grid__column--l-4  grid__column--sidebar">
+			<div class="col-md-4">
 				<aside class="sidebar" role="complementary" itemscope itemprop="http://schema.org/WPSideBar">
 					<?php dynamic_sidebar( 'sidebar' ); ?>
 				</aside>

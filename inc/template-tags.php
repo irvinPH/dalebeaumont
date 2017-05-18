@@ -6,7 +6,7 @@
  * @since   1.0
  */
 
-if ( ! function_exists( 'cascade_navbar' ) ) :
+if ( ! function_exists( 'daleb_navbar' ) ) :
 /**
  * Display a navbar.
  *
@@ -14,7 +14,7 @@ if ( ! function_exists( 'cascade_navbar' ) ) :
  *
  * @since 1.0
  */
-function cascade_navbar( $theme_location ) {
+function daleb_navbar( $theme_location ) {
 	if ( ! has_nav_menu( $theme_location ) ) {
 		return;
 	}
@@ -45,13 +45,13 @@ endif;
 
 
 
-if ( ! function_exists( 'cascade_paginate_links' ) ) :
+if ( ! function_exists( 'daleb_paginate_links' ) ) :
 /**
  * Display page links for paginated archives.
  *
  * @since 1.0
  */
-function cascade_paginate_links() {
+function daleb_paginate_links() {
 	global $wp_query;
 	
 	$args = array(
@@ -72,13 +72,13 @@ endif;
 
 
 
-if ( ! function_exists( 'cascade_link_pages' ) ) :
+if ( ! function_exists( 'daleb_link_pages' ) ) :
 /**
  * Displays page links for paginated posts.
  *
  * @since 1.0
  */
-function cascade_link_pages() {
+function daleb_link_pages() {
 	wp_link_pages( array(
 		'before'      => '<nav class="pagination clearfix" role="navigation">',
 		'after'       => '</nav>',

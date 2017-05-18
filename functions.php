@@ -24,6 +24,8 @@ if ( ! isset( $content_width ) ) {
 include( DB_THEME_DIR . '/inc/setup.php' );
 include( DB_THEME_DIR . '/inc/widgets.php' );
 include( DB_THEME_DIR . '/inc/customizer.php' );
+include( DB_THEME_DIR . '/inc/template-tags.php' );
+//require_once( DB_THEME_DIR .'/partials/wp-bootstrap-navwalker.php'); // Register Custom Navigation Walker
 
 // Actions and Filters
 add_action( 'after_setup_theme', 'dale_beaumont_setup' );
