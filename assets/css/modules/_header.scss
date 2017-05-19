@@ -9,8 +9,15 @@
 		z-index: 5;
 		.site-logo {
 			padding: 0.56em 0;
+
+			img {
+				@include maxv(992)  {
+					max-width: 210px;
+				}
+
+			}
 		}
-		@include maxv(768)  {
+		@include maxv(992)  {
 			.mobile-icons {
 				margin-bottom: 0;
 			    text-align: right;
@@ -21,6 +28,13 @@
 			    li {
 			    	display: inline-block;
 			    	margin-left: 15px;
+
+			    	 @include maxv(480)  {
+			    	 	margin-left: 10px;
+			    	 }
+			    	 @include maxv(320)  {
+			    	 	margin-left: 10px;
+			    	 }
 			    	a {
 			    		display: block;
 			    		height: 50px;
@@ -49,7 +63,7 @@
     		float: right;
     		cursor: pointer;	
 
-		   	@include maxv(768)  { 
+		   	@include maxv(992)  { 
 		   		float: none;
 		   	}
     		.title {
@@ -86,7 +100,7 @@
 			float: left;
     		width: calc(100% - 50px);
 
-			@include maxv(768)  { 
+			@include maxv(992)  { 
 			    position: relative;
 			    float: none;
         		width: 100%;
@@ -97,7 +111,7 @@
 			    list-style: none;
 
     			@include maxv(992)  { 
-					display: none;
+    				display: none;
 					position: absolute;
 					padding-top: -10px;
 				    width: 100%;
@@ -110,6 +124,7 @@
 			    	display: inline-block;
 			    	position: relative;
 			    	margin: 1.5em 0 0.95em 1em;
+			    	cursor: pointer;
 			    	    @include maxv(992)  { 
 						    display: block;
 						    position: relative;
@@ -184,6 +199,7 @@
 								    padding: 0.8em 1em 0.8em 1.3em;
 								    border-top: none;
 								    background-color: #f1f1f1;
+								    background-color: #eae9e9;
 								    color: $navy;
 								    font-size: 0.95em;
 								    text-align: left;
@@ -199,7 +215,7 @@
 										    text-align: right;
 										}
     							&:hover {
-    								background-color: #f1f1f1;
+    								background-color: #eae9e9;
     							}
     						}
 
@@ -209,6 +225,17 @@
     							}
     						}
     					}
+    					&:before {
+							content: '';
+							display: block;
+							position: absolute;
+							height: 12px;
+							width: 12px;
+							background: #f1f1f1;
+							top: 21px;
+							left: 20px;
+							transform: rotate(45deg);
+						}
 
 			    	}
 					&:hover {
@@ -219,21 +246,12 @@
 							opacity: 1; 
 							display: block;
 
-							@include maxv(992)  {     
+							@include maxv(992)  { 
+								opacity: 1;    
 							    display: none;
 							}
 
-							&:before {
-								content: '';
-								display: block;
-								position: absolute;
-								height: 12px;
-								width: 12px;
-								background: #f1f1f1;
-								top: 21px;
-								left: 20px;
-								transform: rotate(45deg);
-							}
+
 						}
 						
 					}
@@ -256,6 +274,11 @@
 			    	}
 
 			    }
+			}
+			.hide-mobile {
+				@include maxv(992)  {
+					display: none;
+				}
 			}
 		}
 		/* Sliding Search Box */
@@ -304,6 +327,9 @@
 				&:-ms-input-placeholder {
 					color: #efb480;
 				}
+				@include maxv(992)  { 
+					border: 1px solid #e3e5e6;
+				}
 			}
 			input[type="search"].sb-search-input {
 				-webkit-appearance: none;
@@ -345,7 +371,13 @@
 				-webkit-font-smoothing: antialiased;
 				color: $orange;
 			}
-
+ 						@include maxv(992)  { 
+						    display: none;
+						    position: relative;
+						    margin: 0;
+						    min-width: auto;
+						    width: 100%;
+						}
 		}
 		.sb-search-open,
 		.no-js .sb-search {
@@ -371,5 +403,7 @@
 
 	}
 }
-
-
+#mobile-search { cursor: pointer; }
+.show {
+	display: block !important;
+}

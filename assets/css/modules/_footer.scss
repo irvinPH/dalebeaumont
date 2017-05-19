@@ -13,14 +13,14 @@
    .fat-footer {
 
 		margin-top: 50px;
-		@include maxv(768)  {
-			margin-top: 30px;
+		@include maxv(992)  {
+			margin-top: 0;
 		    border-top: 1px solid #084469;
 		    padding-top: 30px;
 		}
       .pad-right {
       	padding-right: 50px;
-      		@include maxv(768)  {
+      		@include maxv(992)  {
       			padding-right: 0;
 			}
       }
@@ -38,11 +38,11 @@
 	   .menu {
 	   	   list-style: none;
 		   &--footer {
-	   	    	@include maxv(768)  { 
+	   	    	@include maxv(992)  { 
 	   	    		margin: 30px 0;
 	   	    	}
 		   	    li {
-		   	    	@include maxv(768)  { 
+		   	    	@include maxv(992)  { 
 		   	    		display: inline-block;
 		   	    	}
 		   	    	a {
@@ -52,6 +52,7 @@
 						    background: $orange;
 						    color: #fff;
 						    margin-bottom: 5px;
+						    font-family: $font--bariolregular;
 
 						    &:hover {
 						    	background-color: #00bce4;

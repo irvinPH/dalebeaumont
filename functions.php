@@ -28,12 +28,12 @@ include( DB_THEME_DIR . '/inc/template-tags.php' );
 //require_once( DB_THEME_DIR .'/partials/wp-bootstrap-navwalker.php'); // Register Custom Navigation Walker
 
 // Actions and Filters
-add_action( 'after_setup_theme', 'dale_beaumont_setup' );
-add_action( 'wp_enqueue_scripts', 'dale_beaumont_scripts');
-add_action( 'wp_enqueue_scripts', 'dale_beaumont_styles'); 
-add_action( 'wp_enqueue_scripts', 'dale_beaumont_enqueue_comments_reply' );
-add_action( 'widgets_init', 'dale_beaumont_register_widgets' );
-add_action( 'customize_register', 'dale_beaumont_register_custiomizer_controls' );
+add_action( 'after_setup_theme', 'daleb_setup' );
+add_action( 'wp_enqueue_scripts', 'daleb_scripts');
+add_action( 'wp_enqueue_scripts', 'daleb_styles'); 
+add_action( 'wp_enqueue_scripts', 'daleb_enqueue_comments_reply' );
+add_action( 'widgets_init', 'daleb_register_widgets' );
+add_action( 'customize_register', 'daleb_register_custiomizer_controls' );
 
 
 

@@ -13,7 +13,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-             <section class="module module__banner" style="background: url('http://dalebeaumont.com/wp-content/uploads/2015/01/Dale-Beaumont-Event.jpg') -120px 0px no-repeat; ">
+             <section class="module module__banner" style="background: url('http://dalebeaumont.com/wp-content/uploads/2015/01/Dale-Beaumont-Event.jpg') -120px 0px no-repeat; min-height: 250px;">
                    <div class="container">
                          <h1>Media</h1>
                    </div>
@@ -199,7 +199,7 @@ get_header(); ?>
                                       <div class="module__media">
                                             <h3><a href="">NBN</a></h3>
                                             <div class="image">
-                                                  <img src="<?php echo bloginfo('template_url') ?>/assets/img/Media/NBN.jpg" />>
+                                                  <img src="<?php echo bloginfo('template_url') ?>/assets/img/Media/NBN.jpg" />
                                             </div>
                                            <p><a href="">Click here</a> to read.</p>
                                       </div>
@@ -283,20 +283,7 @@ get_header(); ?>
                           </div>
                   </div> 
              </section>
-            
-            
 
-		<?php
-		if ( have_posts() ) :
-
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
-					//get_template_part( 'template-parts/modular-page', 'page' );
-				endwhile;
-
-		else :
-			//get_template_part( 'template-parts/modular-page/content', 'none' );
-		endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

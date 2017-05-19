@@ -121,6 +121,9 @@
    @if $point == 320 {
      @media (max-width: 320px) { @content; }
    }
+    @if $point == 375 {
+     @media (max-width: 375px) { @content; }
+   }
    @if $point == 480 {
      @media (max-width: 480px) { @content; }
    }
@@ -129,6 +132,9 @@
    }
    @if $point == 768 {
      @media (max-width: 768px) { @content; }
+   }
+     @if $point == 960 {
+     @media (max-width: 960px) { @content; }
    }
    @if $point == 992 {
      @media (max-width: 992px) { @content; }
@@ -144,5 +150,52 @@
    }
    @if $point == 1500 {
      @media (max-width: 1500px) { @content; }
+   }
+ }
+
+
+/* ----------------------------------------------------------------------------
+ * Responsive
+ * Usage
+
+    @include minv(240)  { }
+    @include minv(320)  { }
+    @include minv(480)  { }
+    @include minv(768)  { }
+    @include minv(1024) { }
+    @include minv(1280) { }
+
+ * ------------------------------------------------------------------------- */
+
+@mixin minv($point) {
+    @if $point == 240 {
+      @media (min-width: 240px) { @content; }
+    }
+   @if $point == 320 {
+     @media (min-width: 320px) { @content; }
+   }
+   @if $point == 480 {
+     @media (min-width: 480px) { @content; }
+   }
+   @if $point == 600 {
+     @media (min-width: 600px) { @content; }
+   }
+   @if $point == 768 {
+     @media (min-width: 768px) { @content; }
+   }
+   @if $point == 992 {
+     @media (min-width: 992px) { @content; }
+   }
+   @if $point == 1024 {
+     @media (min-width: 1024px) { @content; }
+   }
+   @if $point == 1140 {
+     @media (min-width: 1140px) { @content; }
+   }
+   @if $point == 1280 {
+     @media (min-width: 1280px) { @content; }
+   }
+   @if $point == 1500 {
+     @media (min-width: 1500px) { @content; }
    }
  }

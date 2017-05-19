@@ -27,13 +27,8 @@
 			 	  	  </div>
 			 	  	  <div class="visible-xs visible-sm col-xs-4 col-sm-8">
                                 <ul class="mobile-icons">
-                                	<li>
-                                		<span id="burger-menu" class="menu-icon fa fa-bars fa-lg"></span>
-										
-                                	</li>
-                                	<li>
-                                		<div><span class="fa fa-search fa-lg"></span></div> 
-                                	</li>
+                                	<li><span id="burger-menu" class="menu-icon fa fa-bars fa-lg"></span></li>
+                                	<li><span id="mobile-search" class="fa fa-search fa-lg"></span></li>
                                 </ul>	
 			 	  	  </div>
 			 	  	  <div class="col-xs-12 col-sm-12 col-md-9">
@@ -52,12 +47,8 @@
 						            );
 						        ?>
 			 	  	  	 	</nav>
-			 	  	  	 	<div id="sb-search" class="sb-search hidden-xs hidden-sm">
-								<form>
-									<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
-									<input class="sb-search-submit" type="submit" value="">
-									<span class="sb-icon-search fa fa-search"></span>
-								</form>
+			 	  	  	 	<div id="sb-search" class="sb-search">
+			 	  	  	 		<?php echo get_search_form() ?>
 							</div>
 			 	  	  </div>
 			 	  </div>

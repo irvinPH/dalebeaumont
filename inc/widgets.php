@@ -5,7 +5,7 @@
  *
  * @since  1.0
  */
-function dale_beaumont_register_widgets() {
+function daleb_register_widgets() {
 	
 	register_sidebar( array(
 		'name'          => 'Front Page',

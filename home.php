@@ -12,7 +12,7 @@
 						</header>
 					<?php endif; ?>
 					
-					<?php get_template_part( 'partials/loop' ); ?>
+					<?php get_template_part( 'partials/grid-loop' ); ?>
 				</div>
 	</div>
 	

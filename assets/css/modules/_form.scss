@@ -48,7 +48,9 @@
                margin: 0;
                text-transform: capitalize;
                font-family: $font--bariolbold;
-
+                @include maxv(320)  {
+					font-size: 1.5em;
+				}
                &--caps {
 		               @include maxv(768)  {
 		               	    color: $orange;
@@ -100,11 +102,14 @@
 					padding: 0;
 				}
 				.moonray-form-input-type-submit {
+
+					@include maxv(960) {
+						width: 100% !important;
+					}
 					 input[type='submit'] {
 						background-color: $orange;
 						font-family: $font--bariolbold;
 						color: #fff;
-
 						text-transform: uppercase;
 					}
 				}

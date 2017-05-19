@@ -1,8 +1,8 @@
 <?php
 
-if ( ! function_exists( 'dale_beaumont_setup' ) ) :
+if ( ! function_exists( 'daleb_setup' ) ) :
 
-	function dale_beaumont_setup() {
+	function daleb_setup() {
 
 
 		// This theme supports the Jetpack site logo.
@@ -45,7 +45,7 @@ if ( ! function_exists( 'dale_beaumont_setup' ) ) :
 endif; 
 
 
-function dale_beaumont_scripts()
+function daleb_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
@@ -71,17 +71,17 @@ function dale_beaumont_scripts()
         wp_enqueue_script('jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.0.0.js', array('jquery'), '', true); // Enqueue it!
 
         //wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '', true); // Enqueue it!
-        wp_register_script('db_vendorsJs', get_template_directory_uri() . '/assets/js/vendors.min.js', array(), '', true); // Custom scripts
-        wp_enqueue_script('db_vendorsJs'); // Enqueue it!
+        wp_register_script('daleb_vendorsJs', get_template_directory_uri() . '/assets/js/vendors.min.js', array(), '', true); // Custom scripts
+        wp_enqueue_script('daleb_vendorsJs'); // Enqueue it!
 
-        wp_register_script('db_customJs', get_template_directory_uri() . '/assets/js/custom.min.js', array(), '', true); // Custom scripts
-        wp_enqueue_script('db_customJs'); // Enqueue it!
+        wp_register_script('daleb_customJs', get_template_directory_uri() . '/assets/js/custom.min.js', array(), '', true); // Custom scripts
+        wp_enqueue_script('daleb_customJs'); // Enqueue it!
 
     }
 
 }
 
-function dale_beaumont_styles()
+function daleb_styles()
 {
 
     /**
@@ -90,19 +90,19 @@ function dale_beaumont_styles()
      *
      */
     //wp_register_style('aa_style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-    wp_register_style('aa_style', get_template_directory_uri() . '/style.min.css', array(), '1.0', 'all');
-    wp_enqueue_style('aa_style'); // Enqueue it!
+    wp_register_style('daleb_style', get_template_directory_uri() . '/style.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('daleb_style'); // Enqueue it!
 
 }
 
-function dale_beaumont_enqueue_comments_reply() {
+function daleb_enqueue_comments_reply() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
 }
 
 
-function dale_beaumont_body_classes( $classes ) {
+function daleb_body_classes( $classes ) {
     if( ! is_front_page() ) {
         $classes[] = 'not-home';
     }
@@ -116,12 +116,12 @@ function dale_beaumont_body_classes( $classes ) {
     }
 
     if( is_archive() || is_search() || is_home() ) {
-        $classes[] = 'list-view';
+        $classes[] = 'list-view grid-view';
     }
 
     return $classes;
 }
-add_filter('body_class', 'dale_beaumont_body_classes');
+add_filter('body_class', 'daleb_body_classes');
 
 /**
  * Extend the default WordPress post classes.
@@ -135,17 +135,17 @@ add_filter('body_class', 'dale_beaumont_body_classes');
  * @param array $classes A list of existing post class values.
  * @return array The filtered post class list.
  */
-function dale_post_classes( $classes ) {
+function daleb_post_classes( $classes ) {
     $classes[] = 'entry';
     $classes[] = 'clearfix';
 
     return $classes;
 }
-add_filter('post_class', 'dale_post_classes');
+add_filter('post_class', 'daleb_post_classes');
 
 
 
-function dale_comment_count( $count ) {
+function daleb_comment_count( $count ) {
     if ( ! is_admin() ) {
         global $id;
         $comments = get_comments( 'status=approve&post_id=' . $id );
@@ -156,33 +156,33 @@ function dale_comment_count( $count ) {
         return $count;
     }
 }
-add_filter('get_comments_number', 'dale_comment_count', 0);
+add_filter('get_comments_number', 'daleb_comment_count', 0);
 
 
 
-function dale_excerpt_more( $more ) {
+function daleb_excerpt_more( $more ) {
     if ( is_front_page() ) {
         return '';
     }
 
     return '… <a href="' . get_permalink() . '" class="entry__read-more">[Read More…]</a>';
 }
-add_filter('excerpt_more', 'dale_excerpt_more', 999);
+add_filter('excerpt_more', 'daleb_excerpt_more', 999);
 
 
-function dale_excerpt_length( $length ) {
+function daleb_excerpt_length( $length ) {
     if ( is_front_page() ) {
         return 25;
     }
 
     return $length;
 }
-add_filter( 'excerpt_length', 'dale_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'daleb_excerpt_length', 999 );
 
-function dale_testimonial_size( $sizes ) {
+function daleb_testimonial_size( $sizes ) {
     return array( '284', '284' );
 }
-add_filter( 'magicdust_testimonials_thumbnail_size', 'dale_testimonial_size', 99 );
+add_filter( 'magicdust_testimonials_thumbnail_size', 'daleb_testimonial_size', 99 );
 
 
 /**
@@ -192,11 +192,11 @@ add_filter( 'magicdust_testimonials_thumbnail_size', 'dale_testimonial_size', 99
  * @return array Filtered flexslider options.
  * @since  1.0
  */
-function cascade_testimonial_slideshow_options( $options ) {
+function daleb_testimonial_slideshow_options( $options ) {
     $options['smoothHeight'] = false;
     $options['controlNav'] = true;
     $options['slideshow'] = false;
 
     return $options;
 }
-add_filter( 'magicdust_testimonials_flexslider_options', 'cascade_testimonial_slideshow_options', 99 );
+add_filter( 'magicdust_testimonials_flexslider_options', 'daleb_testimonial_slideshow_options', 99 );

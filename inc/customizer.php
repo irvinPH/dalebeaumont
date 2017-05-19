@@ -6,7 +6,7 @@
  * @since 1.0
  */
 
-function dale_beaumont_register_custiomizer_controls( $wp_customize ) {
+function daleb_register_custiomizer_controls( $wp_customize ) {
 	$wp_customize->add_section( 'footer' , array(
 		'title'    => 'Footer',
 		'priority' => 110,

@@ -106,6 +106,8 @@ new ScrollMagic.Scene({triggerElement: ".step-2", duration: '100%', reverse: fal
 
 
   $(document).on('ready', function() {
+
+  	   //SLICK SLIDER TESTIMONIALS	
       $(".home .testimonial").slick({
         dots: true,
         speed: 1000,
@@ -113,6 +115,7 @@ new ScrollMagic.Scene({triggerElement: ".step-2", duration: '100%', reverse: fal
         slidesToShow: 1,
         slidesToScroll: 1
       });
+
       $(".not-home .slick-this").slick({
         dots: false,
         speed: 1000,
@@ -122,6 +125,25 @@ new ScrollMagic.Scene({triggerElement: ".step-2", duration: '100%', reverse: fal
         slidesToShow: 1,
         slidesToScroll: 1
       });
-      
+
+      //TOP MENU BURGER ICON TOGGLE
+      $('#burger-menu').on('click', function(){
+
+            $('#navbar').slideToggle('show');
+      });
+
+
+      //TOP MENU BURGER ICON TOGGLE
+      $('#mobile-search').on('click', function(){
+
+      		$(this).toggleClass('fa-close');
+            $('#sb-search').slideToggle('show');
+      });
+
+      //Mobile Menu toggle click
+      $('#navbar > li > a').on('click', function(e) { 
+
+	    $(this).siblings('ul').slideToggle('show');  	
+	})
 
 });		
